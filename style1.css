@@ -1,0 +1,94 @@
+
+body{
+  box-sizing: border-box;
+  margin: 0px;
+
+}
+
+.header{
+  height: 100vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/banner/sushi-banner.jpg);
+  opacity: 0.5;
+}
+
+
+.navbar{
+  background-color: transparent;
+}
+
+.navbar-item{
+font-family: 'Montserrat', sans-serif;
+font-weight: bold;
+}
+
+
+#navbar-item-2{
+  margin: 0 40px 0 40px;
+}
+
+.first-line-title{
+  color: black;
+  font-size: 7em;
+  position: absolute;
+  top:30%;
+  left:30%;
+  font-family: 'Just Another Hand', cursive;
+  font-weight: bold;
+  text-align: center;
+}
+
+.second-line-title{
+  color: black;
+  font-size: 7em;
+  position: absolute;
+  top:48%;
+  left:50%;
+  font-family: 'Just Another Hand', cursive;
+  font-weight: bold;
+}
+
+.intro{
+  padding: 170px 0 200px 0;
+  background: #323232;
+}
+
+.intro h3{
+  font-size: 4rem;
+  font-family: 'Just Another Hand', cursive;
+  text-align: center;
+  width:50%;
+  margin: auto;
+  color:black;
+  margin-bottom: 40px;
+  color:#ac0d0d;
+}
+
+.intro p{
+  font-family: 'Montserrat', sans-serif;
+  margin:auto;
+  width:40%;
+  text-align: center;
+  color:#f9f3f3;
+}
+
+.meny-titel{
+  font-size: 4em;
+  font-family: 'Just Another Hand', cursive;
+  text-align: center;
+  color:black;
+}
+
+#food-section h3{
+  font-family: 'Montserrat', sans-serif;
+}
+#food-section p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card:hover{
+  color:red;
+}
