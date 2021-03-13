@@ -13,7 +13,7 @@ DishModule.getMeny().forEach(f =>{
     <div class="card mt-6 mb-6">
 
     <section class="card-image ">
-    <img style="height:300px;" src="../images/food/${f.image}">
+    <img style="height:300px;" src="./images/food/${f.image}">
     </section>
 
     <section class="card-content">
