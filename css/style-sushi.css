@@ -1,0 +1,207 @@
+body {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+/* Header */
+.header {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/banner/banner.png);
+
+}
+
+/* Navbar */
+.navbar {
+  margin: 20px 30px;
+  background-color: transparent;
+}
+
+.navbar-menu {
+  background-color: transparent;
+  font-weight: bolder;
+}
+
+.navbar-end {
+  width: 147px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Hoved title */
+.title {
+  color: #222831;
+  font-size: 12vh;
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  font-family: 'Just Another Hand', cursive;
+  font-weight: bold;
+}
+
+/* Intro */
+.intro {
+  background: #323232;
+  padding: 100px 0 150px;
+}
+
+.intro h3 {
+  font-size: 8vh;
+  font-family: 'Just Another Hand', cursive;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px;
+  color: #8c0000;
+  width: 40%;
+}
+
+.intro p {
+  font-family: 'Montserrat', sans-serif;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  color: #f9f3f3;
+}
+
+/* Meny */
+.meny {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  background-color: #f4f4f4;
+
+}
+
+.meny h4 {
+  color: #8c0000;
+  font-size: 4vh;
+  font-family: 'Just Another Hand', cursive;
+  margin-bottom: 20px;
+}
+
+.meny a {
+  font-size: 6vh;
+  font-family: 'Just Another Hand', cursive;
+  color: #222831;
+  margin: 10px 0;
+
+}
+
+.meny-list {
+  align-self: center;
+  line-height: 1.3;
+}
+
+.meny-list a:hover {
+  border-bottom: black solid;
+  border-width: 1.2px;
+  transition-timing-function: linear;
+  transition-duration: 1s;
+}
+
+.meny-pic {
+  animation-name:meny-pic;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  align-self: center;
+}
+
+.samuray{
+
+opacity: 0.3;
+}
+
+.footer{
+  height: 500px;
+  background-color: #323232;
+}
+
+/* Animation for meny images */
+
+@keyframes meny-pic {
+  0% {
+    left: 60px;
+    opacity: 0.1
+  }
+
+  25% {
+    left: 40px;
+    opacity: 0.3
+  }
+
+  50% {
+    left: 20px;
+    opacity: 0.5
+  }
+
+  75% {
+    left: 10px;
+    opacity: 0.8
+  }
+
+  100% {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+/* Media queries */
+@media screen and (max-width: 1023px) {
+  .title{
+    font-size: 7vh;
+  }
+
+  /* Navbar */
+
+  .navbar {
+    position: relative;
+    margin: 0px 0px;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    right: 20px;
+  }
+
+  .navbar-end {
+    border-radius: 10%;
+    height: 150px;
+  }
+
+  /* intro div */
+  .intro{
+    padding: 40px 0;
+  }
+
+  .intro h3{
+    line-height: 1.2;
+    width: 80%;
+    font-size: 8vh;
+  }
+  .intro p{
+    line-height: 1.5;
+    width: 80%;
+  }
+
+  /* meny */
+
+  .meny {
+    padding: 40px 0;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .meny h4{
+    font-size: 8vh;
+  }
+
+  .samuray{
+    display: none;
+  }
+}
