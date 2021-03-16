@@ -1,0 +1,591 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Cormorant Upright', serif;
+  color: #f9f3f3;
+}
+
+/* Header */
+.header {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/banner/banner.png);
+}
+
+/* Navbar */
+.navbar {
+  margin: 20px 30px;
+  background-color: transparent;
+}
+
+.navbar-menu {
+  background-color: transparent;
+  font-weight: bolder;
+}
+
+.navbar-end {
+  width: 170px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button {
+  width: 140px;
+}
+
+.button:hover {
+  height: 45px;
+}
+
+/* Hoved title */
+.title {
+  color: #222831;
+  font-size: 12vh;
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  font-family: 'Just Another Hand', cursive;
+  font-weight: bold;
+  animation-name: title;
+  animation-timing-function: ease-in;
+  animation-duration: 2s, 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* Animation for hoved title */
+@keyframes title {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Intro */
+.intro {
+  background: #323232;
+  padding: 100px 0 150px;
+}
+
+/* Opacity 0 på intro-tekst før animation-intro klassen blir lagt til */
+.aos {
+  opacity: 0;
+}
+
+/* denne legges til med classList gjennom JS */
+.animation-intro {
+  animation-name: intro;
+  animation-timing-function: ease-in;
+  animation-duration: 1s, 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* Animation for intro */
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.intro h3 {
+  font-size: 8vh;
+  font-family: 'Just Another Hand', cursive;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 50px;
+  color: #8c0000;
+  width: 40%;
+  line-height: 1.2;
+}
+
+.intro p {
+  font-family: 'Montserrat', sans-serif;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  color: #f9f3f3;
+}
+
+/* Meny */
+.meny {
+  background-color: #f4f4f4;
+
+}
+
+.meny-content{
+  justify-content: space-around;
+  display: flex;
+  align-items:center;
+  height: 100vh;
+}
+
+.meny-list {
+  line-height: 1.3;
+}
+
+/* Denne klassen legges til med classList gjennom JS */
+.meny-pic {
+  background-image: url(../images/food/lunch.jpg);
+  width: 400px;
+  height: 600px;
+  animation-name: meny-pic;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/* Animation for meny images */
+@keyframes meny-pic {
+  0% {
+    margin-left: 200px;
+    opacity: 0.1;
+  }
+
+  25% {
+    margin-left: 150px;
+    opacity: 0.2
+  }
+
+  50% {
+    margin-left: 100px;
+    opacity: 0.3
+  }
+
+  75% {
+    margin-left: 50px;
+    opacity: 0.5;
+  }
+
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+.meny h4 {
+  color: #8c0000;
+  font-size: 4vh;
+  font-family: 'Just Another Hand', cursive;
+  padding-bottom: 20px;
+}
+
+.meny a {
+  font-size: 7vh;
+  font-family: 'Just Another Hand', cursive;
+  color: #222831;
+  line-height: normal;
+  font-weight: normal;
+
+}
+
+/* Border line tegnes med hover effekt */
+.meny-a:after {
+  content: "";
+  display: block;
+  width: 0%;
+  transition: .4s;
+  border-bottom: 3px solid #323232;
+}
+
+.meny-a:hover:after {
+  width: 350%;
+}
+
+/* Footer-contact part */
+.footer-div {
+  background-color: #323232;
+  padding: 150px 0;
+  color: #f9f3f3;
+}
+
+.content1 {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto;
+}
+
+.footer-section1 h1 {
+  color: #8c0000;
+  font-size: 9vh;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.section1-info1 {
+  font-size: 1.4rem;
+  margin: 50px 0;
+}
+
+.section1-info2 {
+  font-size: 1.1rem;
+  margin-top: 150px;
+}
+
+.footer-button {
+  margin-top: 40px;
+  background: #8c0000;
+  border-radius: 0px;
+  padding: 19px 29px;
+  color: #f9f3f3;
+  display: inline-block;
+  font: 'Cormorant Upright', serif;
+  font-weight: bold;
+  text-align: center;
+  border: 0.1px;
+  ;
+}
+
+.footer-section2 {
+  font-size: 1.1rem;
+  padding-left: 50px;
+  border-left: 2px solid #f9f3f3;
+}
+
+.footer-section2 h3 {
+  font-size: 6vh;
+  font-family: 'Just Another Hand', cursive;
+}
+
+.footer-section2 h4 {
+  font-size: 2.5vh;
+  margin-bottom: 20px;
+}
+
+.adresse h4 {
+  font-weight: bolder;
+}
+
+.åpning h4 {
+  margin-top: 25px;
+  font-weight: bolder;
+}
+
+.map h4{
+  font-weight: bolder;
+  margin-top: 25px;
+}
+
+.contact h4 {
+  font-weight: bolder;
+}
+
+
+.adresse {
+  margin-top: 50px;
+}
+
+.åpning {
+  margin-top: 25px;
+}
+
+.map{
+  margin-top: 25px;
+
+}
+
+.contact {
+  margin-top: 25px;
+}
+
+/* Footer boxer nederst */
+.footer-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #323232;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  font-weight: bold;
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  color: #f9f3f3;
+  text-align: center;
+  position: relative;
+  padding: 0;
+}
+
+.box p {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.2  vh;
+  width: 90%;
+}
+
+.box:hover p {
+  display: inline-block;
+}
+
+.box1 {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.box1 img {
+  min-width: 100%;
+  min-height: 100%
+}
+
+.box1:hover img {
+  filter: brightness(40%)
+}
+
+.box2 {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.box2 img {
+  min-width: 100%;
+  min-height: 100%
+}
+
+.box2:hover img {
+  filter: brightness(40%);
+}
+
+.box3 {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.box3 img {
+  min-width: 100%;
+  min-height: 100%
+}
+
+.box3:hover img {
+  filter: brightness(40%);
+}
+
+.box4 {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.box4 img {
+  min-width: 100%;
+  min-height: 100%
+}
+
+.box4:hover img {
+  filter: brightness(40%);
+}
+
+.box2 {
+  background-image: url(../images/other/pic2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.box3 {
+  background-image: url(../images/other/pic3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.box4 {
+  background-image: url(../images/other/pic4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Media queries */
+@media screen and (max-width: 1023px) {
+
+  /* title */
+  .title {
+    font-size: 7vh;
+  }
+
+  /* Navbar */
+  .navbar {
+    position: relative;
+    margin: 0px 0px 0 0;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    right: 20px;
+  }
+
+  .navbar-end {
+    border-radius: 10%;
+    height: 150px;
+  }
+
+  /* Intro div */
+  .intro {
+    padding: 40px 0;
+  }
+
+  .intro h3 {
+    line-height: 1.2;
+    width: 80%;
+    font-size: 8vh;
+  }
+
+  .intro p {
+    line-height: 1.5;
+    width: 80%;
+  }
+
+  /* Meny */
+  .meny{
+    text-align: center;
+  }
+
+  .meny-content{
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  .meny h4 {
+    font-size: 8vh;
+  }
+
+  .meny-pic {
+    margin-top: 20px;
+    background-image: none;
+    width: 200px;
+    opacity: 0;
+    animation-name: meny-pic1;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes meny-pic1 {
+    0% {
+      opacity: 0.1;
+    }
+
+    25% {
+      opacity: 0.2
+    }
+
+    50% {
+      opacity: 0.3
+    }
+
+    75% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .meny-a:hover:after {
+    width: 100%;
+  }
+
+  /* Footer contact part */
+  .footer-div {
+    padding: 50px 0;
+  }
+
+  .content1 {
+    display: block;
+    width: 90%;
+  }
+
+
+  .footer-section1 h1 {
+    font-size: 7vh;
+  }
+
+  .section1-info1 {
+    font-size: 3vh;
+  }
+
+  .section1-info2 {
+    font-size: 2.5vh;
+  }
+
+  .footer-button {
+    margin-top: 20px;
+    background: #8c0000;
+    padding: 19px 29px;
+    color: #f9f3f3;
+    display: inlin-block;
+    font: 'Cormorant Upright', serif;
+    font-weight: bold;
+    text-align: center;
+    border: 0.1px;
+    width: 100%;
+  }
+
+  .footer-section2 {
+    border-left: none;
+    padding-left: 0px;
+  }
+
+  .footer-section2 h3 {
+    margin-top: 50px;
+  }
+
+  .content2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .adresse {
+    order: 1;
+    font-weight: normal;
+    margin-top: 40px;
+  }
+
+  .contact {
+    order: 2;
+    align-items: flex-start;
+    font-weight: normal;
+    margin-top: 40px;
+  }
+
+  .map{
+    margin-top: 40px;
+    order: 4;
+  }
+
+  .åpning {
+    order: 3;
+    font-weight: normal;
+    margin-top: 40px;
+  }
+
+  /* Footer box */
+  .footer-box{
+    display: none;
+  }
+
+
+}
