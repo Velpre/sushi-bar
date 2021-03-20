@@ -77,6 +77,10 @@
   .delete{
     display: block;
   }
+  
+  .field{
+    width: 100%;
+  }
 
   .modal-card-body img{
     right:50%;
