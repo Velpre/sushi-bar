@@ -128,7 +128,7 @@ body {
 
 /* Meny */
 .meny {
-  background-color: #f4f4f4;
+  background-image: linear-gradient(to bottom, #5a5a5a, #7e7e7e, #a4a4a4, #cbcbcb, #f4f4f4);
   justify-content: space-around;
   display: flex;
   align-items: center;
