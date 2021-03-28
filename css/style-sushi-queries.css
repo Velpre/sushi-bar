@@ -1,4 +1,7 @@
 @media screen and (max-width: 1023px) {
+  .header{
+    background-attachment: fixed;
+  }
   .title {
     font-size: 16vw;
   }
