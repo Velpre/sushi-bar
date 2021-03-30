@@ -24,7 +24,7 @@ body {
 .header {
   background-image: url(../images/other/japan-header.jpg);
   height: 100vh;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
