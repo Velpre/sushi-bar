@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <!-- Bulma Effect for modal -->
+  <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style-meny.css">
+  <link rel="stylesheet" href="../css/style-modal.css">
+  <!-- JS -->
+  <script defer type="module" src="../scripts/index-meny.js" charset="utf-8"></script>
+  <script defer type="module" src="../scripts/index-bestillBord.js" charset="utf-8"></script>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="../favicon_io/site.webmanifest">
+
+  <title>Meny | Veljko's Sushi Bar</title>
+</head>
+
+<body>
+  <main>
+    <!-- Brand -->
+    <a class="brand" href="../index.html"><img src="../images/other/logo-red.png" alt=""></a>
+    <!-- SHopping cart -->
+    <div class="shopping-cart-div">
+      <span class="cart-number"></span>
+      <a><i class="shopping-cart-icone fas fa-shopping-cart"></i></a>
+
+    </div>
+    <!-- nav buttons -->
+    <header class="header">
+      <nav class="buttons-meny">
+        <a class="button-meny" href="#section-lunch">LUNCH</a>
+        <a class="button-meny" href="#section-dinner">DINNER</a>
+        <a class="button-meny" href="#section-dessert">DESSERT</a>
+        <a class="button-meny" href="#section-drink">DRINKS</a>
+      </nav>
+      <div class="meny-pic">
+        <img src="../images/other/tatto.jpg" alt="tatto-pic">
+      </div>
+    </header>
+    <!-- lunch -->
+    <article class="section-lunch">
+      <h3 id="section-lunch">Lunch</h3>
+      <hr>
+      <div class="lunch">
+        <!-- Printer ut lunch gjennom JS -->
+      </div>
+    </article>
+    <!-- Dinner -->
+    <div id="section-dinner" class="dinner-div">
+      <!-- Bilde angis i css -->
+    </div>
+    <div class="dinner-dessert-wrapper">
+      <article class="section-dinner">
+        <img src="../images/other/sakura1.png" alt="">
+        <h3>Dinner</h3>
+        <hr>
+        <div class="dinner">
+          <!-- Printer ut dinner gjennom JS -->
+        </div>
+      </article>
+      <!-- Dessert -->
+      <article id="section-dessert" class="section-desert">
+        <img src="../images/other/sakura.png" alt="">
+        <h3>Dessert</h3>
+        <hr>
+        <div class="desert">
+          <!-- Printer ut dinner gjennom JS -->
+        </div>
+      </article>
+
+    </div>
+    <!-- Drinks -->
+    <div id="section-drink" class="drinks-div">
+      <!-- Bilde angis i css -->
+    </div>
+    <article class="section-drink">
+      <h3>Drinks</h3>
+      <hr>
+      <div class="drink">
+        <!-- Printer ut dinner gjennom JS -->
+      </div>
+      <a class="footer-button button-meny">BESTILL BORD</a>
+    </article>
+
+    <!-- Modal bestilling av bord -->
+    <div class="modal modal1 modal-fx-fadeInScale">
+      <div class="modal-background modal-background1"></div>
+      <div class="modal-card modal-content">
+        <!-- Head -->
+        <header class="modal-card-head">
+          <p class="modal-card-title">BORD BESTILLING</p>
+          <button class="delete delete1 is-medium" aria-label="close"></button>
+        </header>
+        <!-- Body -->
+        <section class="modal-card-body">
+          <img src="../images/other/samuray.png" alt="">
+          <!-- Form som styrer at input blir sendt på mail -->
+          <form id="my-form" action="https://formsubmit.co/veljko_kv@hotmail.com" method="POST" />
+          <input type="hidden" name="_subject" value="Ny bord bestillig!">
+          <input type="hidden" name="_captcha" value="false">
+
+          <!-- Navn -->
+          <div class="field">
+            <label class="label"></label>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" type="text" name="Navn: " required placeholder="Navn" value="">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Telefon -->
+          <div class="field">
+            <label class="label"></label>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input input-tel1" type="tel" maxlength=8 pattern="[0-9]{8}" required name="Telefon: " placeholder="Telefon nummer">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-phone-alt"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="field">
+            <label class="label"></label>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left has-icons-right">
+                  <input class="input input-mail1" type="email" name="E-mail: " required placeholder="Email" value="">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Klokkeslett og Dato -->
+          <div class="field">
+            <label class="label"></label>
+            <div class="field-body dato-klokkeslett-wrap">
+              <div class="field dato">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input input-date1" type="date" required name="Dato: ">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-calendar-alt"></i>
+                  </span>
+                </p>
+              </div>
+
+              <div class="field klokkeslett">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input input-klokkeslett1" type="time" min="12:00" max="19:00" required name="Klokkeslett: ">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-clock"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Antall personer -->
+          <div class="field">
+            <label class="label label-modal">Antall personer:</label>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left has-icons-right">
+                  <output id="amount" class="amount">1</output>
+                  <input class="range" id="amountValue" type="range" min="0" max="8" required name="Antall personer: " value="1">
+
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Notat -->
+          <div class="field">
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea" name="Notat: " placeholder="Legg igjen beskjed til oss"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Modal footer -->
+        <footer class="modal-card-foot">
+          <button type="submit" class="button-modal1">S E N D</button>
+          <p id="my-form-status" class="modal-footer-status"></p>
+        </footer>
+
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal handlekurven -->
+    <div class="modal modal2 modal-fx-fadeInScale">
+      <div class="modal-background modal-background2"></div>
+      <div class="modal-card modal-content">
+        <!-- Head -->
+        <header class="modal-card-head">
+          <p class="modal-card-title">HANDLEKURVEN</p>
+          <button class="delete delete2 is-medium" aria-label="close"></button>
+        </header>
+        <!-- Body -->
+        <section class="modal-card-body">
+          <!-- Form som styrer at input blir sendt på mail -->
+          <form id="my-form2" action="https://formsubmit.co/veljko_kv@hotmail.com" method="POST" />
+          <input type="hidden" name="_subject" value="Ny matbestilling!">
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Alle retter -->
+          <div class="valgte-retter">
+            <!-- Printes gjennom JS -->
+          </div>
+
+          <!-- Total pris og slett knappen -->
+          <div class="totalpris-slett-wrapper">
+            <div class="total-pris">
+              <!-- Printes gjennom JS -->
+            </div>
+
+            <input type="button" class="remove-all" name="" value="TØM KURVEN">
+
+          </div>
+
+          <hr class="hr-handlekurven">
+
+          <!-- Navn og telefon-->
+          <div class="field field-kurven">
+            <label class="label"></label>
+            <div class="field-body">
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input" type="text" name="Navn: " required placeholder="Navn" value="">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </p>
+              </div>
+              <div class="field">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input input-tel2" type="tel" maxlength=8 pattern="[0-9]{8}" required name="Telefon: " placeholder="Telefon nummer">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-phone-alt"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Klokkeslett og Dato -->
+          <div class="field field-kurven">
+            <label class="label"></label>
+            <div class="field-body dato-klokkeslett-wrap">
+              <div class="field dato">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input input-date2" type="date" required name="Dato: ">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-calendar-alt"></i>
+                  </span>
+                </p>
+              </div>
+
+              <div class="field klokkeslett">
+                <p class="control is-expanded has-icons-left">
+                  <input class="input input-klokkeslett2" type="time" min="12:00" max="19:00" required name="Klokkeslett: ">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-clock"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Hjemmelevering og input som dukker opp if checked-->
+          <div class="field">
+            <label class="checkbox">
+              <input id="checked" type="checkbox">
+              Hjemmelevering
+            </label>
+          </div>
+          <div style="visibility:hidden;" class="field field-kurven field-adresse">
+            <p class="control is-expanded has-icons-left">
+              <input class="input" type="text" name="Adresse: " required placeholder="Adresse" value="">
+              <span class="icon is-small is-left">
+                <i class="fas fa-map-marked-alt"></i>
+              </span>
+            </p>
+          </div>
+          <!-- Notat -->
+          <div class="field field-kurven">
+            <div class="field-body">
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea" name="Notat: " placeholder="Legg igjen beskjed til oss"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tearms and conditions -->
+          <div class="field field-kurven">
+            <div class="field-body">
+              <div class="field">
+                <label class="checkbox">
+                  <input type="checkbox" required>
+                  Jeg godtar <a href="#">regler & vilkår</a>
+                </label>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Modal footer -->
+        <footer class="modal-card-foot">
+          <button type="submit" class="button-modal2">BESTILL</button>
+          <p id="my-form-status2" class="modal-footer-status"></p>
+        </footer>
+        </form>
+      </div>
+    </div>
+
+  </main>
+</body>
+
+
+</html>
