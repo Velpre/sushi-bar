@@ -1,4 +1,3 @@
-# sushi-bar
-in progress
+# Preview
 
 https://velpre.github.io/sushi-bar/
